@@ -6,7 +6,7 @@ from setuptools import setup
 
 setup(
     name='mdx_figcaption',
-    version='0.1',
+    version='0.1.1',
     author='Helder Correia',
     author_email='me@heldercorreia.com',
     description='Extension for Python-Markdown to parse images with captions inside a figure element.',
