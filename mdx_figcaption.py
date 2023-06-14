@@ -96,13 +96,13 @@ class FigcaptionProcessor(BlockProcessor):
 class FigcaptionExtension(Extension):
     """ Add definition lists to Markdown. """
 
-    def extendMarkdown(self, md, md_globals):
+    def extendMarkdown(self, md):
         """ Add an instance of FigcaptionProcessor to BlockParser. """
 
         # def_list = 'def_list' in md.registeredExtensions
-        md.parser.blockprocessors.add('figcaption',
-                                      FigcaptionProcessor(md.parser),
-                                      '<ulist')
+        md.parser.blockprocessors.register(FigcaptionProcessor(md.parser), 
+                                           'figcaption',
+                                           75)
 
 
 def makeExtension(**kwargs):
