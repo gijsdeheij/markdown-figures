@@ -31,7 +31,7 @@ from __future__ import unicode_literals
 from markdown import Extension
 from markdown.inlinepatterns import IMAGE_LINK_RE, IMAGE_REFERENCE_RE
 from markdown.blockprocessors import BlockProcessor
-from markdown.util import etree
+import xml.etree.ElementTree as etree
 import re
 
 import logging
